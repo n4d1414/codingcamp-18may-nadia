@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Life Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="header">
+
+            <h1 id="clock">00:00:00</h1>
+
+            <p id="date"></p>
+
+            <h2 id="greeting">Good Morning</h2>
+
+            <input type="text" id="username" placeholder="Enter your name">
+
+            <button onclick="saveName()">
+      Save Name
+    </button>
+
+        </header>
+
+        <section class="dashboard">
+
+            <div class="card">
+
+                <h3>Focus Timer</h3>
+
+                <h1 id="timer">25:00</h1>
+
+                <input type="number" id="custom-time" placeholder="Minutes">
+
+                <div class="button-group">
+
+                    <button onclick="startTimer()">
+          Start
+        </button>
+
+                    <button onclick="stopTimer()">
+          Stop
+        </button>
+
+                    <button onclick="resetTimer()">
+          Reset
+        </button>
+
+                    <button onclick="changeTimer()">
+          Change Time
+        </button>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Tasks</h3>
+
+                <div class="task-input">
+
+                    <input type="text" id="task-input" placeholder="Add new task...">
+
+                    <button onclick="addTask()">
+          Add
+        </button>
+
+                </div>
+
+                <select id="sort-select" onchange="sortTasks()">
+        <option value="latest">Latest</option>
+        <option value="done">Completed</option>
+      </select>
+
+                <ul id="task-list"></ul>
+
+            </div>
+
+        </section>
+
+        <section class="links-section">
+
+            <div class="card">
+
+                <h3>Quick Links</h3>
+
+                <div class="links">
+
+                    <a href="https://google.com" target="_blank">
+          Google
+        </a>
+
+                    <a href="https://youtube.com" target="_blank">
+          YouTube
+        </a>
+
+                    <a href="https://gmail.com" target="_blank">
+          Gmail
+        </a>
+
+                    <a href="https://github.com" target="_blank">
+          GitHub
+        </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+
+            <button id="theme-btn">
+      Toggle Dark Mode
+    </button>
+
+        </footer>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
